@@ -1,5 +1,5 @@
-import React, { createContext, useEffect, useState } from "react";
-import { breedGet } from "../constants";
+import React, { createContext, useEffect, useState } from 'react';
+import { breedGet } from '../constants';
 
 export const BreedContext = createContext();
 
@@ -14,7 +14,7 @@ const BreedContextProvider = ({ children }) => {
             fetch(breedGet(breed))
                 .then((res) => res.json())
                 .then((data) => {
-                    setBreed(data.message.slice(0,21));
+                    setBreed(data.message.slice(0, 21));
                     setDoneFetch(true);
                 })
                 .catch((err) => console.log(err));
@@ -23,7 +23,7 @@ const BreedContextProvider = ({ children }) => {
         getBreed();
     }, [breed]);
 
-    return(
+    return (
         <BreedContext.Provider value={{ breedData, doneFetch }}>
             {children}
         </BreedContext.Provider>

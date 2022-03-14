@@ -10,11 +10,11 @@ import NotFound from './components/common/NotFound';
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <BrowserRouter>
       <Header />
       <Switch>
-        <Route exact path="/">
+        <Route exact path='/'>
         <AllBreedsContextProvider>
           <Filters />
         </AllBreedsContextProvider>

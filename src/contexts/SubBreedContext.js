@@ -1,9 +1,9 @@
-import React, { createContext, useEffect, useState } from "react";
-import { subBreedGet } from "../constants";
+import React, { createContext, useEffect, useState } from 'react';
+import { subBreedGet } from '../constants';
 
 export const SubBreedContext = createContext();
 
-const SubBreedContextProvider =  ({ children }) => {
+const SubBreedContextProvider = ({ children }) => {
     const breed = document.querySelector('#breed-select').value;
     const subBreed = document.querySelector('#sub-breed-select').value;
     const [doneFetch, setDoneFetch] = useState();
@@ -20,13 +20,13 @@ const SubBreedContextProvider =  ({ children }) => {
         }
 
         getSubBreed();
-    }, [subBreed]);
+    }, [breed, subBreed]);
 
-return(
-    <SubBreedContext.Provider value={{ subBreedData, doneFetch }}>
-        { children }
-    </SubBreedContext.Provider>
-)
+    return (
+        <SubBreedContext.Provider value={{ subBreedData, doneFetch }}>
+            {children}
+        </SubBreedContext.Provider>
+    )
 }
 
 export default SubBreedContextProvider

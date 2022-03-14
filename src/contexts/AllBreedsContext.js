@@ -1,5 +1,5 @@
-import React, { createContext, useEffect, useState } from "react";
-import { allBreedsGet } from "../constants";
+import React, { createContext, useEffect, useState } from 'react';
+import { allBreedsGet } from '../constants';
 
 export const AllBreedsContext = createContext();
 
@@ -21,7 +21,7 @@ const AllBreedsContextProvider = ({ children }) => {
             .catch((err) => console.log(err));
     }
 
-    return(
+    return (
         <AllBreedsContext.Provider value={{ allBreeds, doneFetch }}>
             {children}
         </AllBreedsContext.Provider>

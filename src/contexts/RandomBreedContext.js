@@ -1,5 +1,5 @@
-import React, { createContext, useEffect, useState } from "react";
-import { randomBreedsGet } from "../constants";
+import React, { createContext, useEffect, useState } from 'react';
+import { randomBreedsGet } from '../constants';
 
 export const RandomBreedsContext = createContext();
 

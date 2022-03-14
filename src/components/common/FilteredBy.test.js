@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import '@testing-library/jest-dom'
-import { render } from "@testing-library/react";
-import FilteredBy from "./FilteredBy";
+import { render } from '@testing-library/react';
+import FilteredBy from './FilteredBy';
 
 const breed = 'bulldog'
 const subBreed = 'french'

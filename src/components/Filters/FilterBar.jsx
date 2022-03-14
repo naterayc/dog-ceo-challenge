@@ -1,12 +1,12 @@
-import React, { useState, useRef } from "react";
-import useGetSubBreeds from "../../custom-hooks/useGetSubBreeds";
-import RandomBreedsContextProvider from "../../contexts/RandomBreedContext";
-import Random from "../RandomBreeds";
-import BreedContextProvider from "../../contexts/BreedContext";
-import Breed from "../Breed";
-import SubBreedContextProvider from "../../contexts/SubBreedContext";
-import SubBreed from "../SubBreed";
-import FilteredBy from "../common/FilteredBy";
+import React, { useState, useRef } from 'react';
+import useGetSubBreeds from '../../custom-hooks/useGetSubBreeds';
+import RandomBreedsContextProvider from '../../contexts/RandomBreedContext';
+import Random from '../RandomBreeds';
+import BreedContextProvider from '../../contexts/BreedContext';
+import Breed from '../Breed';
+import SubBreedContextProvider from '../../contexts/SubBreedContext';
+import SubBreed from '../SubBreed';
+import FilteredBy from '../common/FilteredBy';
 
 const FilterBar = ({ filterData }) => {
     const breedsList = Object.keys(filterData);
@@ -29,18 +29,18 @@ const FilterBar = ({ filterData }) => {
     }
 
     const cleanFilter = (e) => {
-        if(e.target.id === "breed-value"){
+        if (e.target.id === 'breed-value') {
             selectBreed.current.options[0].selected = true;
             setBreed(selectBreed.current.value)
         } else {
             selectSubBreed.current.options[0].selected = true;
             setSubBreedValue(selectSubBreed.current.value);
-        }   
+        }
     }
 
     return (
         <>
-            <div className="filter-bar">
+            <div className='filter-bar'>
                 <h4>Busca:</h4>
                 <select onChange={handleChange} id='breed-select' ref={selectBreed}>
                     <option selectedvalue='true' hidden value=''>Raza</option>
@@ -70,13 +70,13 @@ const FilterBar = ({ filterData }) => {
 
                 (subBreedValue === '' ?
                     <>
-                        <FilteredBy cleanFilter={cleanFilter} breed={breed}/>
+                        <FilteredBy cleanFilter={cleanFilter} breed={breed} />
                         <BreedContextProvider>
                             <Breed />
                         </BreedContextProvider>
                     </> :
                     <>
-                        <FilteredBy cleanFilter={cleanFilter} breed={breed} subBreedValue={subBreedValue}/>
+                        <FilteredBy cleanFilter={cleanFilter} breed={breed} subBreedValue={subBreedValue} />
                         <SubBreedContextProvider>
                             <SubBreed />
                         </SubBreedContextProvider>

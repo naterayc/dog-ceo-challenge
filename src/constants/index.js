@@ -1,4 +1,4 @@
-const base_url = "https://dog.ceo/api/";
+const base_url = 'https://dog.ceo/api/';
 
 export const allBreedsGet = () => `${base_url}breeds/list/all`
 export const randomBreedsGet = () => `${base_url}breeds/image/random/12`;

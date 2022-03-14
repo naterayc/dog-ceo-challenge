@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { subBreedListGet } from "../constants";
+import { useState } from 'react';
+import { subBreedListGet } from '../constants';
 
 const useGetSubBreeds = () => {
     const [subBreeds, setSubBreeds] = useState([]);

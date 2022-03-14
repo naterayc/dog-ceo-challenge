@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import { AllBreedsContext } from '../../contexts/AllBreedsContext';
 import FilterBar from './FilterBar';
 
@@ -10,7 +10,7 @@ const Filters = () => {
             {
                 allBreeds ?
                     <FilterBar filterData={allBreeds} /> :
-                null
+                    null
             }
         </>
     )
